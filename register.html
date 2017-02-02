@@ -1,0 +1,60 @@
+<div class="container">
+
+    <div class="row">
+        <div class="span6 offset3">
+            <div class="page-header">
+                <h1>Sign up</h1>
+            </div>
+
+            <form class="well form-horizontal">
+
+                
+
+                <fieldset>
+
+                    <div class="control-group">
+                        <label class="control-label" for="name">Name:</label>
+                        <div class="controls">
+                            <input id="name" name="name" ng-model="registrationData.name" type="text" class="input-medium" required="required"/>
+                            <p class="help-block alert-error"><c:out value="${requestScope.errorName}"/></p>
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <label class="control-label" for="email">Email:</label>
+                        <div class="controls">
+                            <input id="email" name="email" ng-model="registrationData.email" type="email" class="input-medium" placeholder="your@email.com" required="required"/>
+                            <p class="help-block alert-error"><c:out value="${requestScope.errorEmail}"/></p>
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <label class="control-label" for="password">Password:</label>
+                        <div class="controls">
+                            <input type="password" id="password" ng-model="registrationData.password" name="password" class="input-medium" placeholder="min 6 characters" required="required"/>
+                            
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <label class="control-label" for="confirmationPassword">Confirmation password:</label>
+                        <div class="controls">
+                            <input type="password" id="confirmationPassword" name="confirmationPassword" class="input-medium" placeholder="min 6 characters" required="required" ng-model="registrationData.confimPassword" />
+                            <!-- show they are not equal if they are not -->
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" ng-click="registerUser()" class="btn btn-primary" ui-sref="home"><i class="icon-lock icon-white"></i> Sign up</button>
+                    </div>
+
+                    <div align="center">
+                        You have already an account? <a ui-sref="login">Sign in here</a>
+                    </div>
+
+                </fieldset>
+            </form>
+
+        </div>
+    </div>
+</div>

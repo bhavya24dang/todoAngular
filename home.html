@@ -1,0 +1,20 @@
+<div class="container">
+	<div class="row">
+		<div class="span6 offset3">
+            <div class="page-header">
+                <h1>HOME</h1>
+            </div>
+			<div ng-model="getTotalTodos">
+				<!-- <input type="text" ng-model="myTemp">
+				{{myTemp}} -->
+				<h2>You've got {{getTotalTodos}} things to do</h2>
+				<ul>
+					<li ng-repeat="todo in todos"></li>
+					<input type="checkbox" ng-model="todo.done">
+					<span class="done-{{todo.done}}">{{todo.text}}</span>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+</div>

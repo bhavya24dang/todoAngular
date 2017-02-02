@@ -1,0 +1,34 @@
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="brand" ui-sref="landing">Todolist MVC</a>
+
+            <!--logged in mode -->
+            <div ng-if="isLoggedIn">
+            <ul class="nav">
+                <li ><a href="/todos">Home</a></li>
+                <li ><a href="/about">About</a></li>
+            </ul>
+            <div class="btn-group pull-right">
+                <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+                    <i class="icon-user"></i> Hi {{}} ! <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="/user/account">My account</a></li>
+                    <li class="divider"></li>
+                    <li><a href="/user/logout">Sign out</a></li>
+                </ul>
+            </div>
+            </div>
+
+            <!--not logged in mode -->
+            
+            <ul ng-if="!isLoggedIn" class="nav pull-right">
+                <li class="${requestScope.registerTabStyle}"><a ui-sref="register">Register</a></li>
+                <li class="${requestScope.loginTabStyle}"><a ui-sref="login">Login</a></li>
+            </ul>
+            
+
+        </div>
+    </div>
+</div>
